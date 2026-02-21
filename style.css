@@ -1,0 +1,51 @@
+
+body{
+margin:0;
+font-family:Poppins, sans-serif;
+background:linear-gradient(to right, #f4f7fb, #e6eef7);
+text-align:center;
+color:#0b2c4d;
+}
+
+header{
+background:#0b2c4d;
+color:white;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:24px;
+font-weight:600;
+}
+
+.contact-btn{
+background:#1e88e5;
+color:white;
+padding:10px 20px;
+border:none;
+border-radius:5px;
+}
+
+.container{
+margin-top:60px;
+}
+
+.brain-icon{
+width:140px;
+}
+
+.notify{
+padding:12px 20px;
+background:#1e88e5;
+color:white;
+border:none;
+border-radius:5px;
+}
+
+footer{
+margin-top:60px;
+color:#777;
+}
