@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="Brainova EdTech - AI Tutor for Class 9 and 10">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Brainova">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" href="./assets/icon-192.png">
+<title>Brainova EdTech | Coming Soon</title>
+<style>
+:root{--navy:#112f53;--blue:#2467c8;--ink:#1a2d49;--muted:#5d6b7f;--line:#dce4ef;--bg:#f7f9fd}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+body{background:radial-gradient(circle at 78% 15%,#e4edfc 0,transparent 30rem),linear-gradient(180deg,#f9fbff,#f2f6fc)}
+.wrap{width:min(1415px,calc(100% - 80px));margin:auto}
+header{background:rgba(255,255,255,.92);border-bottom:1px solid #d8e0ea;box-shadow:0 3px 14px #112f5310;position:relative;z-index:10}
+.nav{height:102px;display:flex;align-items:center;gap:28px}
+.logo{width:225px;height:78px;object-fit:contain;object-position:left center}
+.sep{width:1px;height:56px;background:#cbd5e2}.tutor{font-size:18px;line-height:1.25;color:#26364d}.tutor b{display:block;font-size:21px}
+.contact{margin-left:auto;display:flex;gap:27px;align-items:center;font-size:16px;color:#26364d}.contact span{display:flex;align-items:center;gap:10px}.contact .sep2{width:1px;height:40px;background:#d7dfe9}.contact strong{font-size:25px;font-weight:500;color:#214c82}
+.hero{position:relative;overflow:hidden;min-height:690px;padding:34px 0 30px}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#f7f9fd 0%,#f7f9fd 34%,rgba(247,249,253,.72) 47%,rgba(247,249,253,.04) 70%);pointer-events:none;z-index:1}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:44% 56%;align-items:start}
+.left{padding-top:0}.badge{display:inline-flex;align-items:center;gap:12px;padding:11px 17px;border-radius:28px;background:#eef4ff;color:#294f83;font-size:15px;font-weight:800;letter-spacing:.4px;box-shadow:0 6px 18px #214d8115}.badge b{font-size:22px}
+h1{font-size:68px;line-height:1.02;letter-spacing:-2.8px;margin:28px 0 15px;color:var(--navy)}h1 span{display:block;color:#2468cc}
+.tagline{font-size:25px;font-weight:500;margin:0 0 24px}.tagline em{font-style:normal;border-bottom:3px solid #e7b727;padding-bottom:4px}
+.intro{font-size:18px;line-height:1.65;max-width:580px;margin:0;color:#33445d}.intro b{font-weight:800}
+.feature-card{margin-top:22px;max-width:610px;background:rgba(255,255,255,.94);border:1px solid #dbe4ef;border-radius:18px;padding:22px 20px;box-shadow:0 12px 30px #17365a14}
+.feature-title{font-size:14px;letter-spacing:.8px;font-weight:800;color:#31588e;margin:0 0 20px}.features{display:grid;grid-template-columns:repeat(4,1fr)}.feature{padding:0 15px;border-right:1px solid #e0e7f0}.feature:first-child{padding-left:0}.feature:last-child{border:0}.ficon{width:56px;height:56px;border-radius:16px;background:linear-gradient(145deg,#f3f6ff,#e4ebf8);display:grid;place-items:center;font-size:28px;margin-bottom:10px}.feature:nth-child(2) .ficon{background:#e8f7ef}.feature:nth-child(3) .ficon{background:#f2efff}.feature:nth-child(4) .ficon{background:#fff4e4}.feature b{display:block;font-size:15px;line-height:1.18}.feature p{font-size:12px;line-height:1.55;margin:5px 0 0;color:#617087}
+.note{margin-top:14px;font-size:15px;color:#36516f;padding-left:8px}.note .bulb{font-size:23px;vertical-align:middle;margin-right:8px}
+.art{position:absolute;z-index:0;right:0;top:0;width:58%;height:100%;overflow:hidden}.art img{position:absolute;width:108%;height:100%;object-fit:cover;object-position:52% 50%;right:-4%;top:0;mix-blend-mode:multiply}
+.coming{position:relative;z-index:3;margin:10px auto 28px;width:min(1335px,calc(100% - 120px));min-height:155px;background:rgba(255,255,255,.93);border:1px solid #d8e2ee;border-radius:22px;display:grid;grid-template-columns:280px 1fr 1px 420px;align-items:center;padding:18px 28px;box-shadow:0 10px 28px #183b6310}
+.rocket{font-size:88px;text-align:center}.coming h2{font-size:29px;margin:0 0 4px;color:#163d71}.coming h3{font-size:20px;margin:0 0 7px}.coming p{font-size:16px;line-height:1.45;margin:0;color:#45566d;max-width:560px}.vline{height:76px;background:#cbd6e2}.stay{display:flex;align-items:center;gap:20px;padding-left:70px}.mailicon{font-size:58px;color:#214d87}.stay h3{font-size:21px;margin:0 0 7px}.stay p{font-size:16px}
+footer{text-align:center;padding:8px 20px 22px;color:#5c6e83;font-size:14px}
+#installBtn{display:none;position:fixed;right:22px;bottom:22px;z-index:20;border:0;border-radius:14px;padding:13px 18px;background:#112f53;color:#fff;font-weight:700;box-shadow:0 12px 30px #112f5345}
+@media(max-width:1050px){.wrap{width:calc(100% - 40px)}.nav{height:86px;gap:18px}.logo{width:185px}.contact{font-size:13px;gap:14px}.hero-grid{grid-template-columns:58% 42%}.art{width:55%}h1{font-size:56px}.feature-card{max-width:680px}.coming{width:calc(100% - 40px);grid-template-columns:160px 1fr 1px 300px}.stay{padding-left:30px}}
+@media(max-width:780px){.wrap{width:calc(100% - 28px)}.nav{height:auto;min-height:74px;padding:8px 0}.logo{width:150px;height:58px}.sep,.tutor{display:none}.contact{margin-left:auto;font-size:0;gap:10px}.contact strong{font-size:24px}.contact .sep2{display:none}.contact span{font-size:0}.contact span:first-child:before{content:"✉";font-size:21px}.contact span:last-child:before{content:"◎";font-size:25px}
+.hero{min-height:auto;padding:28px 0 15px}.hero:after{background:linear-gradient(180deg,#f7f9fdf2 0%,#f7f9fde0 58%,#f7f9fd 100%)}.hero-grid{display:block}.left{position:relative;z-index:3}.art{position:relative;width:100%;height:420px;margin-top:15px}.art img{width:100%;right:0;object-position:center center}.badge{font-size:12px}h1{font-size:50px;letter-spacing:-2px;margin-top:20px}.tagline{font-size:21px}.intro{font-size:16px}.features{grid-template-columns:1fr 1fr;gap:18px}.feature{border-right:0;padding:0}.feature-card{padding:20px}.coming{width:calc(100% - 28px);grid-template-columns:90px 1fr;padding:18px;margin-top:10px}.rocket{font-size:55px}.vline,.stay{display:none}.coming h2{font-size:24px}.coming h3{font-size:18px}}
+@media(display-mode:standalone){body{padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<img class="logo" src="./assets/brainova-logo.png" alt="Brainova EdTech logo">
+<div class="sep"></div><div class="tutor">AI Tutor for<b>Class 9 &amp; 10</b></div>
+<div class="contact"><span><strong>✉</strong> hello@brainovaedtech.com</span><i class="sep2"></i><span><strong>◎</strong> www.brainovaedtech.com</span></div>
+</div></header>
+
+<main>
+<section class="hero"><div class="art"><img src="./assets/brainova-student.png" alt="Student learning with Brainova AI tutor"></div>
+<div class="wrap hero-grid"><div class="left">
+<div class="badge"><b>⚒</b> WEBSITE UNDER CONSTRUCTION</div>
+<h1>Your AI Tutor for<span>Class 9 &amp; 10</span></h1>
+<p class="tagline">Smart help. Clear concepts. <em>Better learning.</em></p>
+<p class="intro">We’re building Brainova EdTech, an AI Tutor designed for Class 9 and 10 students to learn, practise and revise <b>Maths and Science</b> in a simple, interactive and personalised way.</p>
+<div class="feature-card"><div class="feature-title">WHAT WE ARE BUILDING INITIALLY</div><div class="features">
+<div class="feature"><div class="ficon">💬</div><b>Ask Questions</b><p>Get instant, easy explanations</p></div>
+<div class="feature"><div class="ficon">📖</div><b>Chapter-Wise Learning</b><p>Concepts organised by chapters</p></div>
+<div class="feature"><div class="ficon">☑</div><b>Practice Questions</b><p>Practise and improve step by step</p></div>
+<div class="feature"><div class="ficon">▥</div><b>Personalised Support</b><p>Learn at your pace with AI guidance</p></div>
+</div></div>
+<div class="note"><span class="bulb">💡</span>We are starting with <b>Mathematics and Science</b> for Class 9 &amp; 10.</div>
+</div></div></section>
+
+<section class="coming"><div class="rocket">🚀</div><div><h2>COMING SOON!</h2><h3>Something exciting is on the way.</h3><p>We are working hard to bring the best learning experience to Class 9 &amp; 10 students.</p></div><div class="vline"></div><div class="stay"><div class="mailicon">✉</div><div><h3>Stay updated!</h3><p>Drop us an email and we’ll let you know when we go live.</p></div></div></section>
+</main>
+<footer>♡ &nbsp; Built with passion to make learning simpler, smarter and more effective.</footer>
+<button id="installBtn">Install Brainova</button>
+<script>
+if('serviceWorker' in navigator) addEventListener('load',()=>navigator.serviceWorker.register('./service-worker.js'));
+let deferredPrompt,btn=document.getElementById('installBtn');
+addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;btn.style.display='block'});
+btn.onclick=async()=>{if(!deferredPrompt)return;deferredPrompt.prompt();await deferredPrompt.userChoice;deferredPrompt=null;btn.style.display='none'};
+addEventListener('appinstalled',()=>btn.style.display='none');
+</script>
+</body></html>
